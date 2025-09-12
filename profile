@@ -25,11 +25,9 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-tabs -4
-
 if [ "$TERM" = "linux" ] ; then
 	setterm -blength=0
 fi
 
-export LANG=de_DE.utf8
-export LC_MESSAGES=C
+LANG=de_DE.UTF-8
+LC_MESSAGES=C
