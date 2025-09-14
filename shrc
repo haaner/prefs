@@ -1,6 +1,4 @@
-IS_ZSH=$([ "$(basename $SHELL)" = "zsh" ] && echo 1 || echo 0)
-
-
+IS_ZSH=$([ "$(basename $SHELL)" = "zsh" ] && echo 1)
 
 # make less more friendly for non-text input files, see lesspipe(1)
 #[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -28,7 +26,7 @@ if [ -x /usr/bin/dircolors ]; then
     export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
     export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
-	if [ $IS_ZSH -eq 1 ] ; then
+	if [[ -n $IS_ZSH ]] ; then
 		# Take advantage of $LS_COLORS for completion as well
 		zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 		zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'

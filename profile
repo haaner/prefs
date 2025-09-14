@@ -25,6 +25,8 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+tabs -4
+
 if [ "$TERM" = "linux" ] ; then
 	setterm -blength=0
 fi
