@@ -1,0 +1,31 @@
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+### Linux <=> OSX ###
+
+alias ldd='otool -L'
+alias strace='sudo dtruss'
+
+### Tools ###
+
+# Network
+
+alias ip="lsof -i4" 
+alias tcp="lsof -i4tcp"  
+
+#alias listen='sudo lsof -i -P | grep -i "listen"'
+alias listen='sudo lsof -i -P | grep -i "UDP" ; sudo lsof -i -P | grep -i "listen"'
+#alias listen='lsof -P -iTCP -sTCP:LISTEN'
+
+# clear the last line
+nclr () { local j; for ((j = 0; j <= "${1:-1}"; j++ )); do tput cuu1; done; tput ed; }
+
+# System
+
+alias pstree="pstree -g3" # nachbauen mit awk und struktogramm visualizer
+alias topc='top -o cpu -O +rsize -s 5 -n 20'
+
+# Apple's MIME equivalent -- compiled Info.plist files ...
+
+alias lsregister='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister' 
+ 
+BROWSER="open -a Firefox"
