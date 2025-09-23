@@ -1,1 +1,1 @@
-source prefs/bash_completion.d/*
+. ~/prefs/bash_completion.d/*

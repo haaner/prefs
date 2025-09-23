@@ -46,6 +46,10 @@ zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+if [ -f ~/.zsh_completion ] ; then
+	. ~/.zsh_completion
+fi	
+
 # History configurations
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
