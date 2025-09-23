@@ -45,7 +45,7 @@ alias la='ls -A'
 tabs -4
 
 # In der Shell weiterhin englische Sprache
-export LANG=en_US.utf8
+export LANG=en_US.UTF-8
 
 # NVM einbinden
 export NVM_DIR="$HOME/.config/nvm"
