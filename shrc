@@ -44,6 +44,19 @@ alias la='ls -A'
 
 tabs -4
 
+# In der Shell weiterhin englische Sprache
+export LANG=en_US.utf8
+
+# NVM einbinden
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# In Screen das aktuell laufende Kommando anzeigen
+if echo $TERM | grep ^screen -q ; then
+	PS1='\[\033k\033\\\]'$PS1
+	#PS1='\[\033k\033\'$PS1
+fi
+
 if [ -f ~/.shrc.macos ] ; then
     source ~/.shrc.macos
 fi

@@ -121,6 +121,28 @@ if ! shopt -oq posix; then
   	fi
 fi
 
+source ~/.shrc
+
+#############################
+# Heiko's personal settings #
+#############################
+
 stty -ixon # Disable Ctrl+S for terminal flow-control, makes it usable for bash history forward search
 
-source ~/.shrc
+# Den (existierenden) SSH-Agenten in der Shell verfügbar machen
+#eval $(keychain --eval -Q --quiet)
+
+# Aktuelles Kommando in Titelzeile des Terminals anzeigen 
+set_terminal_title () {
+	if [ -z "$TERMINAL_EMULATOR" ]; then
+
+		if [ "$BASH_COMMAND" = "$PROMPT_COMMAND" ] ; then
+			echo -ne "\033]2;${USER}@${HOSTNAME}: ${PWD/#$HOME/"~"}\007"
+		else
+			echo -ne "\033]2;${BASH_COMMAND}\007"
+		fi
+	fi
+}
+
+# Diese Setting sollte das allerletzte sein, ansonsten flackert die Titelzeile
+trap 'set_terminal_title' DEBUG

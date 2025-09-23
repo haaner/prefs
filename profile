@@ -32,5 +32,14 @@ fi
 LANG=de_DE.UTF-8
 LC_MESSAGES=C
 
-EDITOR=vim
-PAGER=less
+export EDITOR=vim
+export PAGER=less
+
+# EurKey-Tastenbelegung verwenden
+setxkbmap eu
+
+# Linke CMD/WIN-Taste mit linker Ctrl-Taste vertauschen
+#setxkbmap -option ctrl:swap_lwin_lctl
+
+# Anderweitige Default-Tastenbelegungen
+xmodmap ~/.Xmodmap

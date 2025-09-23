@@ -1,0 +1,3 @@
+remove mod4 = Super_L Hyper_L 
+keycode 133 = Hyper_L
+add control = Hyper_L

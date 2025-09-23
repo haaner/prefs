@@ -1,0 +1,18 @@
+startup_message off
+#screen -t post_initialization 39 sh -c 'sleep 1; screen -X msgwait 5'
+msgwait 0
+mousetrack on
+#backtick 5 99999 99999 grep prod /etc/hostname
+#hardstatus alwayslastline "%{b kw}%H %{r}%1` %{w}| %{g}%c %{w}| %{y}%d.%m.%Y %{w}| %{g}%l %{w}| %{-b kw}%u %-Lw%{= rW}%50> %n%f %t %{-}%+Lw%<"
+#hardstatus alwayslastline "%{= gk}| %H | %{+b .y}%l%{-} | %d.%m.%y | %{+b g}%t (%n)%{-} |%1`"
+#hardstatus alwayslastline "%{= gk}| %{+b .y}%l%{-} | %d.%m.%y | %{+b g}%t (%n)%{-} |%1`"
+hardstatus alwayslastline '%{= gw}[%= %{= gw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{gw}]%{gk}[ %d.%m.%y ]'
+#termcapinfo xterm* ti@:te@
+defscrollback 1000
+#escape ^Xa
+bind x stuff "screen -X eval \"chdir $(pwd)\" screen^M"
+#screen -t '♠♠♠ 😊 ♥♥♥' bash --rcfile ~/.bashrc_first
+#screen -t '♠' bash --rcfile ~/.bashrc_first
+
+shelltitle '$ |bash'
+#shelltitle '# |bash' # root needs #
