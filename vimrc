@@ -1,4 +1,8 @@
-" " jump to the last cursor position
+if filereadable("/etc/vim/vimrc")
+	source /etc/vim/vimrc
+endif
+
+" " Zur letzten Cursor Position springen
 autocmd BufReadPost *
 	\ if ! exists("g:leave_my_cursor_position_alone") |
 	\     if line("'\"") > 0 && line ("'\"") <= line("$") |
@@ -6,6 +10,7 @@ autocmd BufReadPost *
 	\     endif |
 	\ endif
 
+" " C/C++ Makros
 map mm <esc>:make<cr>
 
 map co <esc>:copen<cr>
@@ -17,8 +22,8 @@ map cp <esc>:cp<cr>
 map cn <esc>:cn<cr>
 map cl <esc>:clast<cr>
 
-" " set number
-nnoremap <F11> :set nonumber!<CR>:set foldcolumn=0<CR>
+" " Zeilennummern anzeigen
+nnoremap <F10> :set nonumber!<CR>:set foldcolumn=0<CR>
 
 " " use extended regular expressions
 set magic
@@ -39,7 +44,7 @@ set showmode
 " " Wrap after 80 chars
 set textwidth=0
 
-"set mouse=a
+set mouse=a
 
 " " enable / disable paste mode
 map <F12> :set invpaste<CR>
@@ -49,8 +54,8 @@ set noautoindent
 set nocindent
 set noexpandtab
 
-set tabstop=4
-set shiftwidth=4
+set ts=4
+set sw=4
 
 " " Automatically switch to UTF-8 encoding, 
 " " when typing non-ASCII characters
