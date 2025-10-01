@@ -1,3 +1,12 @@
+! Die linke Super/Cmd-Taste als zusätzliche Ctrl-Taste konfigurieren
 remove mod4 = Super_L Hyper_L 
 keycode 133 = Hyper_L
 add control = Hyper_L
+
+! Die linke Alt-Taste zu Alt-Gr machen
+remove mod1 = Alt_L
+keycode 64 = ISO_Level3_Shift
+
+! Die Caps-Lock-Taste zu Alt machen
+clear lock
+keycode 66 = Alt_L Meta_L 
