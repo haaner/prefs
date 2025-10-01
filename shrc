@@ -57,17 +57,6 @@ if echo $TERM | grep ^screen -q ; then
 	#PS1='\[\033k\033\'$PS1
 fi
 
-if [ "$(uname)" = "Linux" ] ; then
-	# EurKey-Tastenbelegung verwenden
-	setxkbmap eu
-
-	# Linke CMD/WIN-Taste mit linker Ctrl-Taste vertauschen
-	#setxkbmap -option ctrl:swap_lwin_lctl
-
-	# Anderweitige Default-Tastenbelegungen
-	xmodmap ~/.Xmodmap
-fi
-
 if [ -f ~/.shrc.macos ] ; then
     source ~/.shrc.macos
 fi

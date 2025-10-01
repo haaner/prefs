@@ -29,6 +29,17 @@ if [ "$TERM" = "linux" ] ; then
 	setterm -blength=0
 fi
 
+if [ "$(uname)" = "Linux" ] ; then
+	# EurKey-Tastenbelegung verwenden
+	# setxkbmap eu # das direkt via /etc/default/keyboard setzen
+
+	# Linke CMD/WIN-Taste mit linker Ctrl-Taste vertauschen
+	#setxkbmap -option ctrl:swap_lwin_lctl
+
+	# Anderweitige Default-Tastenbelegungen
+	xmodmap ~/.Xmodmap
+fi
+
 LANG=de_DE.UTF-8
 LC_MESSAGES=C
 
