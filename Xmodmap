@@ -4,9 +4,8 @@ keycode 133 = Hyper_L
 add control = Hyper_L
 
 ! Die linke Alt-Taste zu AltGr machen
-!remove mod1 = Alt_L
-!keycode 64 = ISO_Level3_Shift
+remove mod1 = Alt_L
+keycode 64 = ISO_Level3_Shift
 
-! Die CapsLock-Taste zu Alt_L machen
-!clear lock
-!keycode 66 = Alt_L Meta_L 
+! Die Eject-Taste zu Alt_L machen
+keycode 169 = Alt_L
