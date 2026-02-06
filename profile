@@ -29,7 +29,9 @@ if [ "$TERM" = "linux" ] ; then
 	setterm -blength=0
 fi
 
-if [ "$(uname)" = "Linux" ] ; then
+UNAME=$(uname)
+
+if [ ${UNAME} = "Linux" ] ; then
 	# EurKey-Tastenbelegung verwenden
 	# setxkbmap eu # das direkt via /etc/default/keyboard setzen
 
@@ -38,6 +40,10 @@ if [ "$(uname)" = "Linux" ] ; then
 
 	# Anderweitige Default-Tastenbelegungen
 	xmodmap ~/.Xmodmap
+
+elif [ ${UNAME} = "Darwin" ] ; then
+	# Die maximale Anzahl von geöffneten Dateien erhöhen
+	ulimit -n 1024
 fi
 
 LANG=de_DE.UTF-8
