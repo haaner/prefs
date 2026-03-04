@@ -8,4 +8,8 @@ add control = Hyper_L
 !keycode 64 = ISO_Level3_Shift
 
 ! Die Eject-Taste zu Alt_L machen
-!keycode 169 = Alt_L
+keycode 169 = Alt_L
+
+!Die CapsLock-Taste zu Alt_L machen
+clear Lock
+keycode 66 = Alt_L
