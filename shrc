@@ -1,4 +1,6 @@
-IS_ZSH=$([ "$(basename $SHELL)" = "zsh" ] && echo 1)
+# which shell is used
+SHELL_CMD=$(ps -p $$ -o comm= 2>/dev/null | tr -d ' ')
+IS_ZSH=$([ "$SHELL_CMD" = "zsh" ] && echo 1)
 
 # make less more friendly for non-text input files, see lesspipe(1)
 #[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
