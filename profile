@@ -31,7 +31,7 @@ fi
 
 UNAME=$(uname)
 
-if [ ${UNAME} = "Linux" ] ; then
+if [ ${UNAME} = "Linux" ] && [ ${TERM} != "linux" ] ; then
 	# EurKey-Tastenbelegung verwenden
 	# setxkbmap eu # das direkt via /etc/default/keyboard setzen
 
