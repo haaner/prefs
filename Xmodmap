@@ -1,5 +1,6 @@
 ! Die linke Super/Cmd-Taste zu Alt_L machen
 remove mod4 = Super_L Hyper_L 
+!keycode 133 = Alt_L NoSymbol Alt_L
 keycode 133 = Alt_L
 add mod1 = Alt_L
 
@@ -7,9 +8,10 @@ add mod1 = Alt_L
 remove mod1 = Alt_L
 keycode 64 = ISO_Level3_Shift
 
-!Die CapsLock-Taste zu Alt_L machen
+!Die CapsLock-Taste zu Meta_L machen
 clear Lock
-keycode 66 = Alt_L
+keycode 66 = Meta_L
+!keycode 205 =
 
 ! Die rechte Ctrl (in Verbindung mit Fn) zu Super-R machen
 !keycode 131 = Super_R

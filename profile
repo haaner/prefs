@@ -33,7 +33,7 @@ UNAME=$(uname)
 
 if [ ${UNAME} = "Linux" ] && [ ${TERM} != "linux" ] ; then
 	# EurKey-Tastenbelegung verwenden
-	# setxkbmap eu # das direkt via /etc/default/keyboard setzen
+	#setxkbmap eu # das direkt via /etc/default/keyboard setzen
 
 	# Linke CMD/WIN-Taste mit linker Ctrl-Taste vertauschen
 	#setxkbmap -option ctrl:swap_lwin_lctl
