@@ -1,20 +1,18 @@
-! Die linke Super/Cmd-Taste als zusätzliche Ctrl-Taste konfigurieren
+! Die linke Super/Cmd-Taste zu Alt_L machen
 remove mod4 = Super_L Hyper_L 
-keycode 133 = Hyper_L
-add control = Hyper_L
-
-! Die rechte Ctrl (in Verbindung mit Fn) zu Super-R machen
-keycode 131 = Super_R
+keycode 133 = Alt_L
+add mod1 = Alt_L
 
 ! Die linke Alt-Taste zu AltGr machen
 remove mod1 = Alt_L
 keycode 64 = ISO_Level3_Shift
 
-! Die Eject-Taste zu Alt_L machen
-!keycode 169 = Alt_L
-
 !Die CapsLock-Taste zu Alt_L machen
 clear Lock
 keycode 66 = Alt_L
 
+! Die rechte Ctrl (in Verbindung mit Fn) zu Super-R machen
+!keycode 131 = Super_R
 
+! F19 -> Away -> Lock-Screen (via XFCE Tastaturbelegung)
+keycode 197 = XF86Away 
