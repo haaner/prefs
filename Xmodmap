@@ -1,10 +1,15 @@
-! Die linke und rechte Cmd-Taste zu AltGr machen
-remove mod4 = Super_L Hyper_L Super_R
-keycode 133 = ISO_Level3_Shift
-keycode 134 = ISO_Level3_Shift
+! Die linke Opt-Taste zu AltGr machen
+remove mod1 = Alt_L 
+keycode 64 = ISO_Level3_Shift
 
-! Die rechte Opt-Taste zu Meta_R machen
-keycode 108 = Meta_R
+! Die rechte Opt-Taste zu AltGr machen
+keycode 108 = ISO_Level3_Shift
+
+! Die linke und rechte Cmd-Taste zu Alt machen
+remove mod4 = Super_L Hyper_L Super_R
+keycode 133 = Alt_L
+keycode 134 = Alt_R
+add mod1 = Alt_L Alt_R
  
 ! Die CapsLock-Taste zu Super_R machen
 clear Lock
@@ -12,9 +17,9 @@ keycode 66 = Super_R
 add mod4 = Super_R
 
 ! Alt_L zur einzigen Mod1-Taste machen
-keycode 204 = 
-clear mod1
-add mod1 = Alt_L
+!keycode 204 = 
+!clear mod1
+!add mod1 = Alt_L
 
 ! Die rechte Ctrl (in Verbindung mit Fn) zu Super-R machen
 !keycode 131 = Super_R
