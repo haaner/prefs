@@ -29,3 +29,5 @@ alias topc='top -o cpu -O +rsize -s 5 -n 20'
 alias lsregister='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister' 
  
 BROWSER="open -a Firefox"
+
+HOMEBREW_NO_AUTO_UPDATE=1 
