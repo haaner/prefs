@@ -50,7 +50,7 @@ tabs -4
 export LANG=en_US.UTF-8
 
 # NVM einbinden
-export NVM_DIR="$HOME/.config/nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # In Screen das aktuell laufende Kommando anzeigen
