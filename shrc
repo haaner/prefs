@@ -49,11 +49,35 @@ tabs -4
 # In der Shell weiterhin englische Sprache
 export LANG=en_US.UTF-8
 
-# NVM einbinden
+# NVM on-the-fly einbinden
 NVM_DIR="$HOME/.nvm"
 if [ -s "$NVM_DIR/nvm.sh" ] ; then
-	export NVM_DIR
-	. "$NVM_DIR/nvm.sh"
+
+	_load_nvm() {
+    	unset -f nvm node npm npx
+		export NVM_DIR
+		. "$NVM_DIR/nvm.sh"
+	}
+
+	nvm() {
+    	_load_nvm
+	    nvm "$@"
+	}
+
+	node() {
+    	_load_nvm
+	    node "$@"
+	}
+
+	npm() {
+    	_load_nvm
+	    npm "$@"
+	}
+
+	npx() {
+    	_load_nvm
+	    npx "$@"
+	}
 fi
 
 # In Screen das aktuell laufende Kommando anzeigen
